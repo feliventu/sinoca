@@ -13,9 +13,9 @@
 
 typedef enum deck {
     SLOT_3 = 0, 
-    SLOT_K,
-    SLOT_Q,
     SLOT_J,
+    SLOT_Q,
+    SLOT_K,
     SLOT_A,
 } deck;
 

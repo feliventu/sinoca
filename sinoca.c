@@ -5,6 +5,12 @@
 
 #include "sinoca.h"
 
+#define POINTS_3 3
+#define POINTS_J 5
+#define POINTS_Q 8
+#define POINTS_K 12
+#define POINTS_A 20
+
 void slotRand(deck line[])
 {
     /* Values between 0 y 4 pseudo-randomly */
@@ -43,9 +49,30 @@ int slot()
 // Hacer un csv que lea con un strtok
 int rewards(deck line[], int * points)
 {
+    
     if (line[0] == line[1] && line[0] == line[2]) {
-            printw("Yay!\n");
-            *points += 50; 
+        switch (line[0])
+        {
+        case 0:
+                *points+=POINTS_3;
+            break;
+        case 1:
+                *points+=POINTS_J;
+            break;
+        case 2:
+                *points+=POINTS_Q;
+            break;
+        case 3:
+                *points+=POINTS_K;
+            break;
+        case 4:
+                *points+=POINTS_A;
+            break;
+        default:
+            break;
+        }            
+        printw("Yay!\n");
+            
     }
     return *points;
 }
